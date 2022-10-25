@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Sorteio</title>
+</head>
+
+<script> 
+
+function sortear() {
+    
+ let np = 100;
+
+ //variável para o número sorteado 
+
+  dn = Math.round(Math.random() * np);
+
+document.getElementById("d").innerHTML= dn;
+
+}
+
+let itens = ["Thais", "Thiago", "Carol" , "Letícia" , "Gabriel", "Yuri", "Bode"]
+
+ function bonus(){
+ 
+let ib = itens.length;
+
+let bn = Math.floor(Math.random() * ib);
+
+document.getElementById("r").innerHTML= itens[bn];
+}
+
+</script>
+<body>
+
+<main class="container">
+  <div class="draw-number">
+    <h1 id="d"> </h1>
+  <button class="btn" onclick="sortear()">Número da sorte</button>
+</div>
+
+<div class="reward">
+ <h1 id="r"> </h1>
+ <button class="btn" onclick="bonus()">Nome</button>
+</div>
+</main>
+</body>
+</html>
